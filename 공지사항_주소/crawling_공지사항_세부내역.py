@@ -10,7 +10,7 @@ req = requests.get(url)
 soup = BeautifulSoup(req.text, 'html.parser')
 
 
-search_result = soup.select('#kart_main_sections> section.board > div.board_inner')
+search_result = soup.select('#kart_main_sections> section.board > div.board_inner>div.board_viewsec>div.board_imgarea>table>tbody>tr>td>p')
 
 for i in search_result:
     print(i.text)
